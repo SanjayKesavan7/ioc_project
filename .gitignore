@@ -1,0 +1,30 @@
+# Dependencies
+node_modules/
+venv/
+langflow_env/
+__pycache__/
+*.pyc
+.uv-cache/
+
+# Environment variables
+.env
+.env.local
+
+# Databases and Vector Stores
+chroma_data/
+chroma-data/
+*.sqlite3
+*.db
+
+# Logs and temporary files
+*.log
+.DS_Store
+
+# Editor directories and files
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
