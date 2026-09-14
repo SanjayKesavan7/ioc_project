@@ -1,4 +1,4 @@
-# ChefRAG — Intelligent Recipe RAG Agent 🧑‍🍳
+# ChefRAG - Intelligent Recipe RAG Agent 🧑‍🍳
 
 An AI-powered recipe assistant built with **LangChain**, **ChromaDB**, and **Groq** that can search, adapt, and generate personalized cooking instructions from your recipe documents.
 
