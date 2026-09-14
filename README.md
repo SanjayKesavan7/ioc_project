@@ -2,14 +2,14 @@
 
 An AI-powered recipe assistant built with **LangChain**, **ChromaDB**, and **Groq** that can search, adapt, and generate personalized cooking instructions from your recipe documents.
 
-## 🏗️ Architecture
+##  Architecture
 
 | Component | Technology |
 |-----------|------------|
 | **Framework** | LangChain (Python) + LangFlow |
 | **Architecture** | RAG-based **Multi-Agent** System |
 | **Vector Database** | ChromaDB (persistent, local) |
-| **LLM** | Groq — Llama 3.3 70B Versatile |
+| **LLM** | Groq — GPT OSS 120B |
 | **Embeddings** | HuggingFace `all-MiniLM-L6-v2` |
 | **Backend** | Python / FastAPI |
 | **Frontend** | React 19 / Vite |
@@ -18,10 +18,10 @@ An AI-powered recipe assistant built with **LangChain**, **ChromaDB**, and **Gro
 
 ```
 User Query → Orchestrator Agent → [Tool Selection]
-                                      ├── 📚 Recipe Retrieval Agent (Hybrid RAG)
-                                      ├── 🔄 Recipe Adaptation Agent
-                                      ├── 📊 Nutrition Analysis Agent
-                                      └── 🛒 Shopping List Agent
+                                      ├──  Recipe Retrieval Agent (Hybrid RAG)
+                                      ├──  Recipe Adaptation Agent
+                                      ├──  Nutrition Analysis Agent
+                                      └──  Shopping List Agent
                                               ↕
                                      ChromaDB Vector Store
                                               ↕
@@ -97,7 +97,7 @@ curl -X POST http://localhost:8000/upload \
   -F "document=@data/sample_recipes.txt"
 ```
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 ioc-project/
@@ -128,17 +128,17 @@ ioc-project/
 └── README.md                   # This file
 ```
 
-## 🎯 Features
+##  Features
 
-- **📄 Document Ingestion**: Upload PDF or TXT recipe files — they're automatically chunked, embedded, and indexed
-- **💬 Conversational Q&A**: Ask natural language questions about recipes and cooking
-- **🔄 Recipe Adaptation**: Modify recipes for dietary restrictions (vegan, keto, gluten-free, etc.)
-- **📊 Nutritional Analysis**: Get estimated nutritional facts for any recipe
-- **🛒 Shopping Lists**: Generate organized shopping lists by store section
-- **⚙️ User Preferences**: Set dietary restrictions, cuisine preferences, available ingredients
-- **🧠 Hybrid RAG**: Never gets stuck — blends document knowledge with LLM expertise
+- ** Document Ingestion**: Upload PDF or TXT recipe files — they're automatically chunked, embedded, and indexed
+- ** Conversational Q&A**: Ask natural language questions about recipes and cooking
+- ** Recipe Adaptation**: Modify recipes for dietary restrictions (vegan, keto, gluten-free, etc.)
+- ** Nutritional Analysis**: Get estimated nutritional facts for any recipe
+- ** Shopping Lists**: Generate organized shopping lists by store section
+- ** User Preferences**: Set dietary restrictions, cuisine preferences, available ingredients
+- ** Hybrid RAG**: Never gets stuck — blends document knowledge with LLM expertise
 
-## 🔧 API Endpoints
+##  API Endpoints
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|
@@ -150,10 +150,8 @@ ioc-project/
 | POST | `/clear-history` | Clear conversation history |
 | GET | `/health` | Health check |
 
-## 🌊 LangFlow Integration
+##  LangFlow Integration
 
 ChefRAG includes a LangFlow-compatible flow file. See [`langflow/README.md`](langflow/README.md) for setup instructions.
 
-## 📝 License
 
-MIT
